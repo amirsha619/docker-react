@@ -5,10 +5,10 @@ services:
   - docker
 
 before_install: 
-  - docker build -t amirsha99/react_pro -f Dockerfile.dev .
+  - docker build -t amirsha99/docker_react -f Dockerfile.dev .
 
 script: 
-  - docker run -e CI=true amirsha99/react_pro npm run test
+  - docker run -e CI=true amirsha99/docker_react npm run test
 
 #deploy:
   #provider: elasticbeanstalk
